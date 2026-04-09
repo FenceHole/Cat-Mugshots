@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Caugshots — Cat Mugshots"
+version = "1.0.0"
+id = "artifacts/catmugshots"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21999
+
+[services.development]
+run = "pnpm --filter @workspace/catmugshots run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/catmugshots", "run", "build" ]
+publicDir = "artifacts/catmugshots/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21999"
+BASE_PATH = "/"
