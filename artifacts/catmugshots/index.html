@@ -164,37 +164,6 @@ header{
 }
 .nav-shop:hover{transform:translateY(-2px);background:#333}
 
-/* Cat cop peeking over nav — Easter Egg #1 */
-.cop-peek{
-  position:absolute;
-  top:-28px;left:50%;
-  transform:translateX(-50%);
-  font-size:28px;
-  line-height:1;
-  animation:cop-bob 6s ease-in-out infinite;
-  pointer-events:none;
-  z-index:60;
-  filter:drop-shadow(0 2px 4px rgba(0,0,0,0.2));
-}
-.cop-peek::after{
-  content:'★';
-  display:block;
-  font-size:14px;
-  text-align:center;
-  margin-top:2px;
-  opacity:0;
-  animation:cop-plate 6s ease-in-out infinite;
-}
-@keyframes cop-bob{
-  0%,100%{transform:translateX(-50%) translateY(0)}
-  40%{transform:translateX(-50%) translateY(4px)}
-  50%{transform:translateX(-50%) translateY(0)}
-  80%{transform:translateX(-50%) translateY(6px)}
-}
-@keyframes cop-plate{
-  45%,55%{opacity:1}
-  0%,100%{opacity:0}
-}
 
 /* ──────────────────────────────────
    PRISON BARS (decorative overlay)
@@ -1004,10 +973,8 @@ footer{background:var(--ink);color:#fff;padding:56px 24px;}
   <em>Criminally cute mugs &amp; wanted poster wall art for cat people</em> &nbsp;·&nbsp; Secure checkout on Printify &nbsp;·&nbsp; catmugshots.com
 </div>
 
-<!-- ═══ HEADER + CAT COP PEEK ═══ -->
+<!-- ═══ HEADER ═══ -->
 <header style="position:sticky;top:0;z-index:50;">
-  <!-- Easter Egg #1: Officer Muffin peeking over the nav -->
-  <div class="cop-peek" title="Officer Muffin is ON DUTY. No sudden movements.">ON DUTY</div>
   <div class="nav">
     <div class="brand">
       <div class="brand-icon">CAT<br>MUG</div>
