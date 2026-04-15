@@ -1,0 +1,9 @@
+{
+  "buildCommand": "pnpm --filter @workspace/catmugshots run build",
+  "outputDirectory": "artifacts/catmugshots/dist/public",
+  "installCommand": "pnpm install",
+  "framework": null,
+  "env": {
+    "BASE_PATH": "/"
+  }
+}
