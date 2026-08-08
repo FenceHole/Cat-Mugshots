@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Cat Mug Shots — Criminally Cute Mugs & Wall Art for Tiny Felons</title>
-<meta name="description" content="Cat Mug Shots turns everyday feline crimes into polished ceramic mugs and wanted poster wall art. Shop 11oz and 15oz mugshot mugs and printable cat wanted posters — fulfilled securely through Printify."/>
+<title>Cat Mug Shots — Criminally Cute Mugshot Mugs for Tiny Felons</title>
+<meta name="description" content="Cat Mug Shots turns everyday feline crimes into polished ceramic mugs. Shop 11oz and 15oz cat mugshot mugs — fulfilled through Amazon. Every mug helps bail out a shelter cat."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Special+Elite&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 <style>
@@ -841,168 +841,7 @@ footer{background:var(--ink);color:#fff;padding:56px 24px;}
   100%{transform:translateY(-4px) rotate(5deg)}
 }
 
-/* ──────────────────────────────────
-   WANTED POSTER — Easter Egg #5
-   Tucked into the story section
-────────────────────────────────── */
-.wanted-poster{
-  position:absolute;top:40px;left:24px;
-  width:90px;
-  background:#fdf3d0;
-  border:3px solid #c8a84b;
-  border-radius:4px;
-  padding:8px;
-  text-align:center;
-  transform:rotate(-4deg);
-  box-shadow:4px 4px 12px rgba(0,0,0,0.3);
-  z-index:10;
-  font-family:'Special Elite',serif;
-}
-.wanted-poster .wp-head{
-  font-size:8px;letter-spacing:0.14em;text-transform:uppercase;color:#8a6200;
-  border-bottom:1px solid #c8a84b;padding-bottom:4px;margin-bottom:4px;
-}
-.wanted-poster .wp-cat{font-size:28px;line-height:1;margin:4px 0;}
-.wanted-poster .wp-name{font-size:9px;font-weight:bold;color:#111;text-transform:uppercase;}
-.wanted-poster .wp-reward{
-  font-size:8px;color:#c64b45;font-weight:bold;margin-top:4px;
-  border-top:1px solid #c8a84b;padding-top:4px;
-  letter-spacing:0.08em;
-}
 
-/* ──────────────────────────────────
-   WALL ART / WANTED POSTER SECTION
-────────────────────────────────── */
-#wall-art{
-  background:#1a0f00;
-  color:#fff;
-  position:relative;overflow:hidden;
-}
-.wall-art-inner{
-  max-width:var(--max);margin:0 auto;padding:64px 24px 80px;position:relative;z-index:2;
-}
-.poster-showcase{
-  display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:44px 0 60px;
-}
-.poster-showcase img{
-  width:100%;border-radius:6px;
-  box-shadow:0 8px 40px rgba(0,0,0,0.55),0 0 0 1px rgba(255,255,255,0.04);
-  transition:transform .28s,box-shadow .28s;
-}
-.poster-showcase img:hover{
-  transform:translateY(-4px) scale(1.01);
-  box-shadow:0 16px 52px rgba(0,0,0,0.65);
-}
-.poster-grid{
-  display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:44px 28px;
-}
-.poster-card{
-  position:relative;
-  clip-path:polygon(
-    1% 2%, 0% 0%, 4% 1%, 8% 0%, 12% 1.5%, 17% 0%, 22% 1%, 27% 0%,
-    32% 1.5%, 37% 0%, 42% 1%, 47% 0.5%, 52% 0%, 57% 1.5%, 62% 0%,
-    67% 1%, 72% 0%, 77% 1.5%, 82% 0%, 87% 1%, 92% 0.5%, 97% 0%, 100% 0%,
-    99% 4%, 100% 8%, 99% 12%, 100% 17%, 99% 22%, 100% 27%,
-    99% 32%, 100% 37%, 99% 42%, 100% 47%, 99% 52%, 100% 57%,
-    99% 62%, 100% 67%, 99% 72%, 100% 77%, 99% 82%, 100% 87%,
-    99% 92%, 100% 97%, 100% 100%,
-    96% 99%, 92% 100%, 88% 99.5%, 84% 100%, 80% 99%,
-    76% 100%, 72% 99.5%, 68% 100%, 64% 99%, 60% 100%,
-    56% 99.5%, 52% 100%, 48% 99%, 44% 100%, 40% 99.5%,
-    36% 100%, 32% 99%, 28% 100%, 24% 99.5%, 20% 100%,
-    16% 99%, 12% 100%, 8% 99.5%, 4% 100%, 0% 100%,
-    1% 96%, 0% 92%, 1% 88%, 0% 84%, 1% 80%,
-    0% 76%, 1% 72%, 0% 68%, 1% 64%, 0% 60%,
-    1% 56%, 0% 52%, 1% 48%, 0% 44%, 1% 40%,
-    0% 36%, 1% 32%, 0% 28%, 1% 24%, 0% 20%,
-    1% 16%, 0% 12%, 1% 8%, 0% 4%
-  );
-  transition:transform .28s,box-shadow .28s;
-  box-shadow:4px 8px 20px rgba(0,0,0,0.55);
-}
-.poster-card:hover{
-  transform:translateY(-8px) rotate(-0.7deg);
-  box-shadow:10px 18px 32px rgba(0,0,0,0.6);
-}
-.poster-paper{
-  background-color:#c9a44e;
-  background-image:
-    radial-gradient(ellipse at 8% 8%, rgba(60,25,0,0.28) 0%, transparent 50%),
-    radial-gradient(ellipse at 92% 8%, rgba(50,20,0,0.22) 0%, transparent 48%),
-    radial-gradient(ellipse at 92% 92%, rgba(55,22,0,0.28) 0%, transparent 52%),
-    radial-gradient(ellipse at 8% 92%, rgba(50,20,0,0.22) 0%, transparent 48%),
-    linear-gradient(155deg, #d6b46a 0%, #c49840 35%, #cfa952 60%, #be9234 85%, #c9a44e 100%);
-  padding:18px 18px 14px;
-  border:3px solid rgba(40,18,0,0.65);
-}
-.p-wanted{
-  font-family:'Anton',sans-serif;
-  font-size:54px;letter-spacing:0.14em;
-  color:#160700;text-align:center;line-height:1;
-  text-shadow:1px 2px 0 rgba(0,0,0,0.18);
-  border-bottom:3px solid rgba(40,18,0,0.5);
-  padding-bottom:8px;margin-bottom:4px;
-}
-.p-doa{
-  font-family:'Special Elite',serif;
-  font-size:10.5px;letter-spacing:0.22em;text-transform:uppercase;
-  color:#2c1000;text-align:center;
-  margin-bottom:10px;padding:3px 0;
-}
-.p-photo{
-  border:2px solid rgba(40,18,0,0.5);
-  background:rgba(0,0,0,0.07);
-  display:flex;align-items:center;justify-content:center;
-  min-height:140px;
-  font-size:86px;line-height:1;
-  margin-bottom:10px;position:relative;
-}
-.p-photo::after{
-  content:'';position:absolute;inset:0;
-  background:linear-gradient(to bottom,rgba(0,0,0,0.03),rgba(0,0,0,0.1));
-  pointer-events:none;
-}
-.p-name{
-  font-family:'Anton',sans-serif;
-  font-size:20px;letter-spacing:0.04em;text-transform:uppercase;
-  text-align:center;color:#160700;
-  border-top:2px solid rgba(40,18,0,0.45);
-  border-bottom:2px solid rgba(40,18,0,0.45);
-  padding:5px 0;margin:0 0 5px;
-}
-.p-desc{
-  font-family:'Special Elite',serif;
-  font-size:12.5px;text-align:center;
-  color:#2c1000;margin:0 0 8px;
-  font-style:italic;line-height:1.4;padding:0 4px;
-}
-.p-reward{
-  font-family:'Anton',sans-serif;
-  font-size:26px;letter-spacing:0.05em;
-  text-align:center;color:#160700;
-  border-top:2px solid rgba(40,18,0,0.45);
-  padding-top:7px;margin-top:2px;
-}
-.p-paws{
-  text-align:center;font-size:12px;
-  margin-top:4px;opacity:0.45;letter-spacing:10px;
-}
-.p-btn{
-  display:block;
-  background:#2C1200;color:#d8b96a;
-  padding:12px 16px;text-align:center;
-  font-family:'Anton',sans-serif;font-size:13px;letter-spacing:0.1em;
-  transition:background .18s;
-}
-.p-btn:hover{background:#1a0800;}
-.wall-art-cta{
-  text-align:center;margin-top:56px;
-  border-top:1px solid rgba(255,255,255,0.08);
-  padding-top:36px;
-}
-.wall-art-cta p{
-  font-size:15px;color:rgba(255,255,255,0.4);margin-bottom:18px;font-weight:500;
-}
 
 /* ──────────────────────────────────
    RESPONSIVE
@@ -1010,7 +849,7 @@ footer{background:var(--ink);color:#fff;padding:56px 24px;}
 @media(max-width:900px){
   .hero,.story-inner,.email-inner{grid-template-columns:1fr;}
   .hero-visual{order:-1;}
-  .story-mug,.wanted-poster{display:none;}
+  .story-mug{display:none;}
   .steps,.reviews-grid,.faq-grid{grid-template-columns:1fr;}
   .nav-links{display:none;}
   .footer-inner{grid-template-columns:1fr;}
@@ -1018,8 +857,6 @@ footer{background:var(--ink);color:#fff;padding:56px 24px;}
   .form-row{grid-template-columns:1fr;}
   #baxter{display:none;}
   .cop-sentry{gap:30px;}
-  .poster-showcase{grid-template-columns:1fr;}
-  .poster-grid{grid-template-columns:repeat(auto-fill,minmax(200px,1fr));}
 }
 @media(max-width:600px){
   .faq-grid{grid-template-columns:1fr;}
@@ -1037,25 +874,25 @@ footer{background:var(--ink);color:#fff;padding:56px 24px;}
     <span>EXCLUSIVE: <em>Officer Whiskers confirms</em> the suspect denied all charges, then immediately knocked the evidence off the table &nbsp;•&nbsp;</span>
     <span>DEVELOPING: <em>3AM disturbance in hallway</em> — witnesses report "unmistakable zoomie energy," suspect fled the scene at 47mph &nbsp;•&nbsp;</span>
     <span>SOURCES CONFIRM: <em>Couch scratching suspect still at large</em> — describes self as "self-employed interior designer" &nbsp;•&nbsp;</span>
-    <span>BREAKING: <em>Sgt. Fluffkins releases new WANTED poster</em> — criminal deemed extremely cute and dangerously fluffy &nbsp;•&nbsp;</span>
+    <span>BREAKING: <em>New mug suspect added to the lineup</em> — criminal deemed extremely cute and dangerously fluffy &nbsp;•&nbsp;</span>
     <span>REPORT: <em>Litter kicked across three rooms</em>, possibly four — investigation ongoing, janitor in tears &nbsp;•&nbsp;</span>
     <span>URGENT: <em>Cat Cop Cpl. Biscuits</em> warns: "Do not approach. Suspect is armed with murder mittens and zero remorse." &nbsp;•&nbsp;</span>
     <span>OPINION: <em>Was it a bite or a love nip?</em> Panel of cat cops disagrees. Press conference at 11. &nbsp;•&nbsp;</span>
-    <span>NEW EVIDENCE: <em>Wanted poster wall art now available</em> — frame your felon, display the crime &nbsp;•&nbsp;</span>
+    <span>BULLETIN: <em>Shelter cat bailed out</em> — adoption sponsored, felon released to forever home, zero remorse expected &nbsp;•&nbsp;</span>
     <span>BREAKING: <em>Local tabby acquitted on technicality</em> — claims she was "technically asleep" during the sock incident &nbsp;•&nbsp;</span>
     <span>EXCLUSIVE: <em>Officer Whiskers confirms</em> the suspect denied all charges, then immediately knocked the evidence off the table &nbsp;•&nbsp;</span>
     <span>DEVELOPING: <em>3AM disturbance in hallway</em> — witnesses report "unmistakable zoomie energy," suspect fled the scene at 47mph &nbsp;•&nbsp;</span>
     <span>SOURCES CONFIRM: <em>Couch scratching suspect still at large</em> — describes self as "self-employed interior designer" &nbsp;•&nbsp;</span>
-    <span>BREAKING: <em>Sgt. Fluffkins releases new WANTED poster</em> — criminal deemed extremely cute and dangerously fluffy &nbsp;•&nbsp;</span>
+    <span>BREAKING: <em>New mug suspect added to the lineup</em> — criminal deemed extremely cute and dangerously fluffy &nbsp;•&nbsp;</span>
     <span>REPORT: <em>Litter kicked across three rooms</em>, possibly four — investigation ongoing, janitor in tears &nbsp;•&nbsp;</span>
     <span>URGENT: <em>Cat Cop Cpl. Biscuits</em> warns: "Do not approach. Suspect is armed with murder mittens and zero remorse." &nbsp;•&nbsp;</span>
     <span>OPINION: <em>Was it a bite or a love nip?</em> Panel of cat cops disagrees. Press conference at 11. &nbsp;•&nbsp;</span>
-    <span>NEW EVIDENCE: <em>Wanted poster wall art now available</em> — frame your felon, display the crime &nbsp;•&nbsp;</span>
+    <span>BULLETIN: <em>Shelter cat bailed out</em> — adoption sponsored, felon released to forever home, zero remorse expected &nbsp;•&nbsp;</span>
   </div>
 </div>
 
 <div class="announce">
-  <em>Criminally cute mugs &amp; wanted poster wall art for cat people</em> &nbsp;·&nbsp; Secure checkout on Printify &nbsp;·&nbsp; catmugshots.com
+  <em>Criminally cute mugshot mugs for cat people</em> &nbsp;·&nbsp; Fulfilled through Amazon &nbsp;·&nbsp; catmugshots.com
 </div>
 
 <!-- ═══ HEADER ═══ -->
@@ -1067,7 +904,6 @@ footer{background:var(--ink);color:#fff;padding:56px 24px;}
     </div>
     <ul class="nav-links">
       <li><a href="#lineup">Mug Shots</a></li>
-      <li><a href="#wall-art">Wanted Posters</a></li>
       <li><a href="#story">About</a></li>
       <li><a href="#bail-out">Bail a Cat</a></li>
       <li><a href="#tip-line">Crime Tip Line</a></li>
@@ -1083,10 +919,10 @@ footer{background:var(--ink);color:#fff;padding:56px 24px;}
   <div class="hero">
     <div class="hero-copy">
       <div class="eyebrow">Most Wanted Drop</div>
-      <h1>Criminally<br>cute mugs &amp;<br><em>wanted posters.</em></h1>
-      <p class="hero-sub">Cat Mug Shots turns everyday feline crimes into polished mugs and wanted poster wall art. Browse the suspects, then finish your purchase securely on Printify.</p>
+      <h1>Criminally<br>cute mugs<br><em>for cat people.</em></h1>
+      <p class="hero-sub">Cat Mug Shots turns everyday feline crimes into polished ceramic mugs. Browse the suspects, pick your felon, and check out on Amazon.</p>
       <div class="hero-btns">
-        <a class="btn-primary" href="https://cool-cat-stuff.printify.me/product/18466062/3am-zoomies-cat-mug-shot-11oz15oz" target="_blank" rel="noopener noreferrer">
+        <a class="btn-primary" href="#" target="_blank" rel="noopener noreferrer">
           Shop 3AM Zoomies
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
@@ -1095,7 +931,7 @@ footer{background:var(--ink);color:#fff;padding:56px 24px;}
       <div class="trust-chips">
         <span class="chip">✔ Glossy ceramic mugs</span>
         <span class="chip">✔ 11oz + 15oz</span>
-        <span class="chip">✔ Wanted poster prints</span>
+        <span class="chip">✔ Fulfilled by Amazon</span>
         <span class="chip">✔ Dishwasher-safe</span>
         <span class="chip">✔ catmugshots.com</span>
       </div>
@@ -1116,7 +952,7 @@ footer{background:var(--ink);color:#fff;padding:56px 24px;}
       <div class="section-head">
         <div class="eyebrow">All Suspects</div>
         <h2>The Lineup</h2>
-        <p>Six confirmed criminals. Hover any suspect for the evidence. Every buy button goes straight to Printify — mugs processed, cats unapologetic.</p>
+        <p>Six confirmed criminals. Hover any suspect for the evidence. Every buy button goes straight to Amazon — mugs processed, cats unapologetic.</p>
       </div>
       <div class="product-grid">
         
@@ -1137,11 +973,11 @@ footer{background:var(--ink);color:#fff;padding:56px 24px;}
             </div>
             <h3 class="card-title">3AM Zoomies</h3>
             <p class="card-blurb">For the cat who turns the hallway into a racetrack and thinks 3:07 AM is cardio hour.</p>
-            <a class="buy-btn" href="https://cool-cat-stuff.printify.me/product/18466062/3am-zoomies-cat-mug-shot-11oz15oz" target="_blank" rel="noopener noreferrer">
-              Buy on Printify
+            <a class="buy-btn" href="#" target="_blank" rel="noopener noreferrer">
+              Buy on Amazon
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
-            <span class="secure-note">Secure checkout on Printify</span>
+            <span class="secure-note">Fulfilled by Amazon</span>
           </div>
         </article>
         <article class="card" data-id="sock-thief">
@@ -1161,11 +997,11 @@ footer{background:var(--ink);color:#fff;padding:56px 24px;}
             </div>
             <h3 class="card-title">Sock Thief</h3>
             <p class="card-blurb">For the tiny burglar who keeps stealing lone socks and leaving behind evidence but no regret.</p>
-            <a class="buy-btn" href="https://cool-cat-stuff.printify.me/product/18466399/sock-thief-cat-mug-shot-11oz15oz" target="_blank" rel="noopener noreferrer">
-              Buy on Printify
+            <a class="buy-btn" href="#" target="_blank" rel="noopener noreferrer">
+              Buy on Amazon
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
-            <span class="secure-note">Secure checkout on Printify</span>
+            <span class="secure-note">Fulfilled by Amazon</span>
           </div>
         </article>
         <article class="card" data-id="scratched-the-couch">
@@ -1185,11 +1021,11 @@ footer{background:var(--ink);color:#fff;padding:56px 24px;}
             </div>
             <h3 class="card-title">Scratched the Couch</h3>
             <p class="card-blurb">Deadpan confession energy for the fluffy little menace who chose the couch as a personal art project.</p>
-            <a class="buy-btn" href="https://cool-cat-stuff.printify.me/product/18465893/scratched-the-couch-cat-mug-shot-11oz15oz" target="_blank" rel="noopener noreferrer">
-              Buy on Printify
+            <a class="buy-btn" href="#" target="_blank" rel="noopener noreferrer">
+              Buy on Amazon
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
-            <span class="secure-note">Secure checkout on Printify</span>
+            <span class="secure-note">Fulfilled by Amazon</span>
           </div>
         </article>
         <article class="card" data-id="kicked-litter">
@@ -1209,11 +1045,11 @@ footer{background:var(--ink);color:#fff;padding:56px 24px;}
             </div>
             <h3 class="card-title">Kicked Litter Across the State</h3>
             <p class="card-blurb">For the cat who treats the litter box like a confetti cannon and the floor like collateral damage.</p>
-            <a class="buy-btn" href="https://cool-cat-stuff.printify.me/product/18464554/kicked-litter-across-the-state-cat-mug-shot-11oz15oz" target="_blank" rel="noopener noreferrer">
-              Buy on Printify
+            <a class="buy-btn" href="#" target="_blank" rel="noopener noreferrer">
+              Buy on Amazon
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
-            <span class="secure-note">Secure checkout on Printify</span>
+            <span class="secure-note">Fulfilled by Amazon</span>
           </div>
         </article>
         <article class="card" data-id="bites-the-hand">
@@ -1233,11 +1069,11 @@ footer{background:var(--ink);color:#fff;padding:56px 24px;}
             </div>
             <h3 class="card-title">Bites the Hand That Feeds Her</h3>
             <p class="card-blurb">Sharp, funny, and painfully accurate for cat parents who know affection and betrayal can happen in the same minute.</p>
-            <a class="buy-btn" href="https://cool-cat-stuff.printify.me/product/18871726/cool-cat-stuff-mug-bites-the-hand-that-feeds-her-funny-cat-mugshot" target="_blank" rel="noopener noreferrer">
-              Buy on Printify
+            <a class="buy-btn" href="#" target="_blank" rel="noopener noreferrer">
+              Buy on Amazon
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
-            <span class="secure-note">Secure checkout on Printify</span>
+            <span class="secure-note">Fulfilled by Amazon</span>
           </div>
         </article>
         <article class="card" data-id="christmas-tree">
@@ -1257,11 +1093,11 @@ footer{background:var(--ink);color:#fff;padding:56px 24px;}
             </div>
             <h3 class="card-title">Knocked Over the Christmas Tree</h3>
             <p class="card-blurb">Holiday-specific destruction delivered with innocent eyes and absolutely no remorse.</p>
-            <a class="buy-btn" href="https://cool-cat-stuff.printify.me/product/18466304/knocked-over-the-christmas-tree-cat-mug-shot-11oz15oz" target="_blank" rel="noopener noreferrer">
-              Buy on Printify
+            <a class="buy-btn" href="#" target="_blank" rel="noopener noreferrer">
+              Buy on Amazon
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </a>
-            <span class="secure-note">Secure checkout on Printify</span>
+            <span class="secure-note">Fulfilled by Amazon</span>
           </div>
         </article>
       </div>
@@ -1284,31 +1120,6 @@ footer{background:var(--ink);color:#fff;padding:56px 24px;}
   <!-- ═══ CAUTION TAPE ═══ -->
   <div class="caution-tape"></div>
 
-  <!-- ═══ WALL ART / WANTED POSTER PRINTS ═══ -->
-  <section id="wall-art">
-    <div class="wall-art-inner">
-      <div class="section-head">
-        <div class="eyebrow" style="color:var(--gold);">New Drop — Wall Art</div>
-        <h2 style="color:#fff;">Wanted Poster<br>Prints</h2>
-        <p style="color:rgba(255,255,255,0.5);">Vintage western-style wanted poster prints. The suspects are guilty. The paper is aged. Frame-worthy and ready to incriminate your walls.</p>
-      </div>
-
-      <!-- Product photo showcase -->
-      <div class="poster-showcase">
-        <img src="/wanted-posters-1.png" alt="Cat Mug Shots Wanted Poster Prints — Scratched The Couch, Knocked Over The Christmas Tree, Houseplant Serial Killer, Fridge Bandit" loading="lazy" />
-        <img src="/wanted-posters-2.png" alt="Cat Mug Shots Wanted Poster Prints — Litter Bandit, Midnight Maniac, Sock Snatcher" loading="lazy" />
-      </div>
-
-      <div class="wall-art-cta">
-        <p>All prints available on Printify — printed, shipped, and framed-ready.</p>
-        <a class="btn-primary" href="https://cool-cat-stuff.printify.me/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;background:var(--gold);color:var(--ink);">
-          Browse All Prints on Printify
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
   <!-- ═══ CAUTION TAPE 2 ═══ -->
   <div class="caution-tape"></div>
 
@@ -1317,36 +1128,29 @@ footer{background:var(--ink);color:#fff;padding:56px 24px;}
     <div class="section-head">
       <div class="eyebrow">Simple Process</div>
       <h2>How Buying Works</h2>
-      <p>Brand and discovery happen here. Printify handles the transaction.</p>
+      <p>Browse here. Buy on Amazon. Simple as that.</p>
     </div>
     <div class="steps">
       <div class="step">
         <div class="step-num">01</div>
         <h3>Browse the suspects</h3>
-        <p>Land on a real branded site, not a default POD storefront. Bigger visuals, better copy, more gift energy.</p>
+        <p>Land on a real branded site, not a default storefront. Bigger visuals, better copy, more gift energy.</p>
       </div>
       <div class="step">
         <div class="step-num">02</div>
         <h3>Click the mug you want</h3>
-        <p>Every card links to its exact live Printify product page. Size options, photos, and everything are there.</p>
+        <p>Every card links to its Amazon product page. Size options, photos, and Prime shipping are all there.</p>
       </div>
       <div class="step">
         <div class="step-num">03</div>
-        <h3>Finish checkout on Printify</h3>
-        <p>Printify handles size selection, shipping, payment, and fulfillment. Secure and simple.</p>
+        <h3>Finish checkout on Amazon</h3>
+        <p>Amazon handles size selection, shipping, payment, and fulfillment. Trusted and simple.</p>
       </div>
     </div>
   </div>
 
   <!-- ═══ STORY ═══ -->
   <section id="story" style="position:relative;overflow:hidden;">
-
-    <!-- Easter Egg #5: Wanted poster in the corner -->
-    <div class="wanted-poster" title="REWARD: One tuna can">
-      <div class="wp-head">WANTED</div>
-      <div class="wp-name">The Couch<br>Destroyer</div>
-      <div class="wp-reward">Reward:<br>1 tuna can</div>
-    </div>
 
     <!-- Easter Egg #4: Paparazzi cat snapping photos -->
     <div class="paparazzi-peek">
@@ -1361,11 +1165,11 @@ footer{background:var(--ink);color:#fff;padding:56px 24px;}
         <div class="eyebrow">Brand Story</div>
         <h2>For cat lovers who know the suspect is guilty</h2>
         <p>Cat Mug Shots is the brand for people who wake up to zoomies, missing socks, shredded furniture, kicked litter, surprise bites, and seasonal tree crimes — and somehow still adore the furry criminal responsible.</p>
-        <p>Each design is a deadpan booking photo — and now a full wanted poster print — for the chaos agent who runs your household. Funny on the shelf. Frame-worthy on the wall. No bail money required.</p>
+        <p>Each design is a deadpan booking photo for the chaos agent who runs your household. Funny on the shelf, giftable to any cat person who knows the suspect is guilty. No bail money required.</p>
         <div class="story-tags">
           <span class="story-tag">Gift-forward</span>
-          <span class="story-tag">Mugs + Wall Art</span>
-          <span class="story-tag">Direct to Printify</span>
+          <span class="story-tag">Criminally Cute Mugs</span>
+          <span class="story-tag">Fulfilled by Amazon</span>
           <span class="story-tag">catmugshots.com</span>
           <span class="story-tag">More suspects coming</span>
         </div>
@@ -1395,7 +1199,7 @@ footer{background:var(--ink);color:#fff;padding:56px 24px;}
       <div class="review">
         <div class="review-stars">★★★★★</div>
         <strong>"Easy to buy, arrived fast."</strong>
-        <p>Clean checkout experience on Printify, no friction. Mug quality is great — heavy, glossy, and the print is sharp. 10/10 would buy again.</p>
+        <p>Clean checkout experience on Amazon, no friction. Mug quality is great — heavy, glossy, and the print is sharp. 10/10 would buy again.</p>
         <div class="review-author">Priya L., verified victim</div>
       </div>
     </div>
@@ -1454,7 +1258,7 @@ footer{background:var(--ink);color:#fff;padding:56px 24px;}
       <div class="email-form">
         <div class="fake-input">Enter your email for future drops</div>
         <a class="btn-primary" href="#" style="justify-content:center;">Join the lineup</a>
-        <p class="email-note">No fake codes. Real offers when they launch in Printify.</p>
+        <p class="email-note">No fake codes. Real offers when new suspects drop on Amazon.</p>
       </div>
     </div>
   </div>
@@ -1514,7 +1318,7 @@ footer{background:var(--ink);color:#fff;padding:56px 24px;}
       <div class="faq-grid">
         <div class="faq-item">
           <strong>Are the mugs dishwasher-safe?</strong>
-          <p>Yes. All Cat Mug Shots mugs are dishwasher-safe ceramic. The live Printify product pages confirm this for each design.</p>
+          <p>Yes. All Cat Mug Shots mugs are dishwasher-safe ceramic. The Amazon product pages confirm this for each design.</p>
         </div>
         <div class="faq-item">
           <strong>What sizes are available?</strong>
@@ -1522,7 +1326,7 @@ footer{background:var(--ink);color:#fff;padding:56px 24px;}
         </div>
         <div class="faq-item">
           <strong>How do I actually buy one?</strong>
-          <p>Hit any "Buy on Printify" button — it takes you directly to that product's live page. Select your size and finish checkout there. Printify handles shipping and fulfillment.</p>
+          <p>Hit any "Buy on Amazon" button — it takes you directly to that product's live page. Select your size and finish checkout there. Amazon handles shipping and fulfillment.</p>
         </div>
         <div class="faq-item">
           <strong>Can I suggest a new crime for the lineup?</strong>
@@ -1546,21 +1350,20 @@ footer{background:var(--ink);color:#fff;padding:56px 24px;}
   <div class="footer-inner">
     <div>
       <div class="footer-brand">Cat Mug Shots</div>
-      <p class="footer-sub">A premium brand site wrapped around your live Printify store. Every buy button goes directly to the real product page.</p>
+      <p class="footer-sub">A premium brand site for cat mugshot mugs, fulfilled through Amazon. Every buy button goes directly to the real product page.</p>
     </div>
     <div class="footer-links">
       <a href="#lineup">Shop mugs</a>
-      <a href="#wall-art">Wanted poster prints</a>
       <a href="#story">About the brand</a>
       <a href="#bail-out">Bail a Cat</a>
       <a href="#tip-line">Crime Tip Line</a>
       <a href="#faq">Help / FAQ</a>
-      <a href="https://cool-cat-stuff.printify.me/" target="_blank" rel="noopener noreferrer">Open Printify store ↗</a>
+      <a href="https://www.amazon.com" target="_blank" rel="noopener noreferrer">Shop on Amazon ↗</a>
     </div>
   </div>
   <div class="footer-bottom">
     <span>© 2026 Cat Mug Shots. All suspects guilty.</span>
-    <span>Checkout handled securely by Printify · Reporting by <em>The Cat Mugshots Gazette</em></span>
+    <span>Fulfilled through Amazon · Reporting by <em>The Cat Mugshots Gazette</em></span>
   </div>
 </footer>
 
