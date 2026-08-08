@@ -610,6 +610,90 @@ header{
 }
 
 /* ──────────────────────────────────
+   BAIL OUT A CAT
+────────────────────────────────── */
+#bail-out{
+  background:#0d1f0d;
+  color:#fff;
+  position:relative;overflow:hidden;
+}
+#bail-out::before{
+  content:'';position:absolute;inset:0;
+  background:repeating-linear-gradient(
+    90deg,
+    rgba(255,255,255,0),rgba(255,255,255,0) 60px,
+    rgba(255,255,255,0.018) 60px,rgba(255,255,255,0.018) 66px
+  );
+  pointer-events:none;
+}
+.bail-inner{
+  max-width:var(--max);margin:0 auto;padding:80px 24px;
+  position:relative;z-index:2;
+  display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;
+}
+.bail-copy .eyebrow{color:#6fcf6f;}
+.bail-copy .eyebrow::before{background:#6fcf6f;}
+.bail-copy h2{
+  font-family:'Anton',sans-serif;font-size:clamp(30px,4vw,52px);
+  text-transform:uppercase;letter-spacing:0.02em;line-height:1.05;margin-bottom:20px;
+}
+.bail-copy h2 em{color:#6fcf6f;font-style:normal;}
+.bail-copy p{
+  font-size:15px;color:rgba(255,255,255,0.65);font-weight:500;line-height:1.7;margin-bottom:14px;
+}
+.bail-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(111,207,111,0.12);border:1.5px solid rgba(111,207,111,0.3);
+  border-radius:99px;padding:10px 20px;
+  font-size:13px;font-weight:800;color:#6fcf6f;letter-spacing:0.04em;
+  text-transform:uppercase;margin-top:8px;
+}
+/* Bail receipt card */
+.bail-receipt{
+  background:var(--paper);
+  border:1px solid var(--border);
+  border-radius:20px;
+  padding:32px 28px;
+  font-family:'Special Elite',serif;
+  color:var(--ink);
+  position:relative;
+  box-shadow:0 20px 60px rgba(0,0,0,0.4);
+}
+.receipt-stamp{
+  position:absolute;top:28px;right:28px;
+  border:3px solid #6fcf6f;border-radius:50%;
+  width:72px;height:72px;
+  display:flex;align-items:center;justify-content:center;
+  text-align:center;
+  font-size:9px;font-weight:900;letter-spacing:0.07em;text-transform:uppercase;
+  color:#6fcf6f;line-height:1.2;
+  transform:rotate(12deg);
+}
+.receipt-header{
+  font-size:10px;letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:6px;
+}
+.receipt-title{
+  font-size:22px;letter-spacing:0.05em;text-transform:uppercase;
+  margin-bottom:24px;border-bottom:2px dashed var(--border);padding-bottom:16px;
+}
+.receipt-row{
+  display:flex;justify-content:space-between;align-items:baseline;
+  font-size:13px;margin-bottom:10px;gap:12px;
+}
+.receipt-row-label{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:0.08em;}
+.receipt-row-val{font-weight:600;font-size:14px;text-align:right;}
+.receipt-total{
+  border-top:2px dashed var(--border);margin-top:16px;padding-top:16px;
+  font-size:15px;font-weight:700;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.receipt-total-val{color:#6fcf6f;font-size:17px;font-family:'Anton',sans-serif;letter-spacing:0.06em;}
+@media(max-width:700px){
+  .bail-inner{grid-template-columns:1fr;}
+}
+
+/* ──────────────────────────────────
    FAQ
 ────────────────────────────────── */
 .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
@@ -985,6 +1069,7 @@ footer{background:var(--ink);color:#fff;padding:56px 24px;}
       <li><a href="#lineup">Mug Shots</a></li>
       <li><a href="#wall-art">Wanted Posters</a></li>
       <li><a href="#story">About</a></li>
+      <li><a href="#bail-out">Bail a Cat</a></li>
       <li><a href="#tip-line">Crime Tip Line</a></li>
       <li><a href="#faq">FAQ</a></li>
     </ul>
@@ -1316,6 +1401,48 @@ footer{background:var(--ink);color:#fff;padding:56px 24px;}
     </div>
   </div>
 
+  <!-- ═══ BAIL OUT A CAT ═══ -->
+  <section id="bail-out">
+    <div class="bail-inner">
+      <div class="bail-copy">
+        <div class="eyebrow">The Cause</div>
+        <h2>Every mug bails<br>out a <em>real cat.</em></h2>
+        <p>A portion of every Cat Mug Shots purchase goes directly toward sponsoring cat adoptions at local shelters — covering adoption fees for cats who've been waiting the longest to find their forever crime scene.</p>
+        <p>Because the real criminals deserve a home, too. Buy a mug. Free a felon.</p>
+        <div class="bail-badge">Supporting shelter adoptions nationwide</div>
+      </div>
+      <div class="bail-receipt">
+        <div class="receipt-stamp">BAIL<br>POSTED</div>
+        <div class="receipt-header">Official Document · Cat Mug Shots</div>
+        <div class="receipt-title">Bail Receipt</div>
+        <div class="receipt-row">
+          <span class="receipt-row-label">Suspect</span>
+          <span class="receipt-row-val">Unknown Feline, At Large</span>
+        </div>
+        <div class="receipt-row">
+          <span class="receipt-row-label">Charge</span>
+          <span class="receipt-row-val">Being criminally cute</span>
+        </div>
+        <div class="receipt-row">
+          <span class="receipt-row-label">Shelter hold</span>
+          <span class="receipt-row-val">Waived</span>
+        </div>
+        <div class="receipt-row">
+          <span class="receipt-row-label">Adoption fee</span>
+          <span class="receipt-row-val">Sponsored by you</span>
+        </div>
+        <div class="receipt-row">
+          <span class="receipt-row-label">Released to</span>
+          <span class="receipt-row-val">Forever home</span>
+        </div>
+        <div class="receipt-total">
+          <span>Status</span>
+          <span class="receipt-total-val">FREE</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ═══ EMAIL ═══ -->
   <div class="email-section">
     <div class="email-inner">
@@ -1425,6 +1552,7 @@ footer{background:var(--ink);color:#fff;padding:56px 24px;}
       <a href="#lineup">Shop mugs</a>
       <a href="#wall-art">Wanted poster prints</a>
       <a href="#story">About the brand</a>
+      <a href="#bail-out">Bail a Cat</a>
       <a href="#tip-line">Crime Tip Line</a>
       <a href="#faq">Help / FAQ</a>
       <a href="https://cool-cat-stuff.printify.me/" target="_blank" rel="noopener noreferrer">Open Printify store ↗</a>
