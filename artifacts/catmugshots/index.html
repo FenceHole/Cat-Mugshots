@@ -844,6 +844,136 @@ footer{background:var(--ink);color:#fff;padding:56px 24px;}
 
 
 /* ──────────────────────────────────
+   THE GOOD MEOW SECTION
+────────────────────────────────── */
+#good-meow-section{
+  background:#1a1008;
+  padding:72px 24px 64px;
+  position:relative;
+  overflow:hidden;
+}
+/* subtle halftone texture */
+#good-meow-section::before{
+  content:'';position:absolute;inset:0;
+  background-image:radial-gradient(circle,rgba(232,184,75,0.06) 1px,transparent 1px);
+  background-size:28px 28px;
+  pointer-events:none;
+}
+.gm-inner{max-width:var(--max);margin:0 auto;position:relative;z-index:2;}
+
+/* Masthead */
+.gm-masthead{text-align:center;margin-bottom:48px;}
+.gm-eyebrow{
+  font-size:11px;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:10px;
+}
+.gm-logo{
+  font-family:'Special Elite',serif;
+  font-size:clamp(36px,6vw,72px);
+  color:#FAF6EF;
+  line-height:1;
+  letter-spacing:0.04em;
+}
+.gm-logo span{color:var(--gold);}
+.gm-rule{
+  display:flex;align-items:center;gap:12px;
+  justify-content:center;margin:14px 0;
+}
+.gm-rule-line{flex:1;max-width:120px;height:2px;background:var(--gold);opacity:0.4;}
+.gm-rule-diamond{width:8px;height:8px;background:var(--gold);transform:rotate(45deg);flex-shrink:0;}
+.gm-tagline{
+  font-family:'Special Elite',serif;
+  font-size:13px;color:rgba(250,246,239,0.5);
+  letter-spacing:0.08em;
+}
+
+/* Carousel */
+.gm-carousel{position:relative;}
+.gm-track-wrap{overflow:hidden;}
+.gm-track{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  transition:opacity 0.4s ease;
+}
+.gm-track.fading{opacity:0;}
+.gm-card{
+  background:#FAF6EF;
+  border-radius:16px;
+  padding:0;
+  display:flex;flex-direction:column;
+  overflow:hidden;
+  border:1px solid rgba(232,184,75,0.15);
+}
+.gm-card-label{
+  background:var(--red);
+  padding:6px 14px;
+  font-size:9.5px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;
+  color:#fff;font-family:'Manrope',sans-serif;
+}
+.gm-card-body{padding:20px 22px 22px;display:flex;flex-direction:column;gap:10px;flex:1;}
+.gm-headline{
+  font-family:'Special Elite',serif;
+  font-size:17px;line-height:1.35;
+  color:var(--ink);
+}
+.gm-blurb{
+  font-size:13px;color:var(--muted);font-weight:500;line-height:1.65;flex:1;
+}
+.gm-byline{
+  font-size:11px;font-weight:700;color:var(--muted);
+  text-transform:uppercase;letter-spacing:0.07em;
+  border-top:1px solid var(--border);padding-top:10px;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.gm-read-more{
+  font-size:11.5px;font-weight:800;color:var(--red);
+  text-transform:uppercase;letter-spacing:0.06em;
+  transition:opacity .18s;white-space:nowrap;
+}
+.gm-read-more:hover{opacity:0.7;}
+
+/* Controls */
+.gm-controls{
+  display:flex;align-items:center;justify-content:center;
+  gap:16px;margin-top:32px;
+}
+.gm-arrow{
+  width:36px;height:36px;border-radius:50%;
+  background:rgba(250,246,239,0.08);border:1px solid rgba(250,246,239,0.15);
+  color:#FAF6EF;font-size:15px;
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;transition:background .18s;
+  flex-shrink:0;
+}
+.gm-arrow:hover{background:rgba(250,246,239,0.16);}
+.gm-dots{display:flex;gap:8px;}
+.gm-dot{
+  width:6px;height:6px;border-radius:50%;
+  background:rgba(250,246,239,0.2);
+  cursor:pointer;transition:background .25s,transform .25s;
+}
+.gm-dot.active{background:var(--gold);transform:scale(1.3);}
+
+/* CTA */
+.gm-cta{
+  text-align:center;margin-top:40px;
+}
+.gm-cta-link{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--gold);color:var(--ink);
+  padding:14px 28px;border-radius:50px;
+  font-size:14px;font-weight:800;letter-spacing:0.02em;
+  transition:transform .18s,box-shadow .18s;
+}
+.gm-cta-link:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(232,184,75,0.3);}
+.gm-cta-sub{
+  margin-top:12px;
+  font-size:12px;color:rgba(250,246,239,0.35);
+  font-family:'Special Elite',serif;letter-spacing:0.06em;
+}
+
+/* ──────────────────────────────────
    RESPONSIVE
 ────────────────────────────────── */
 @media(max-width:900px){
@@ -857,6 +987,7 @@ footer{background:var(--ink);color:#fff;padding:56px 24px;}
   .form-row{grid-template-columns:1fr;}
   #baxter{display:none;}
   .cop-sentry{gap:30px;}
+  .gm-track{grid-template-columns:1fr;}
 }
 @media(max-width:600px){
   .faq-grid{grid-template-columns:1fr;}
@@ -1203,6 +1334,42 @@ footer{background:var(--ink);color:#fff;padding:56px 24px;}
       </div>
     </div>
   </div>
+
+  <!-- ═══ THE GOOD MEOW ═══ -->
+  <section id="good-meow-section">
+    <div class="gm-inner">
+
+      <div class="gm-masthead">
+        <div class="gm-eyebrow">As reported by our friends at</div>
+        <div class="gm-logo">The <span>Good</span> Meow</div>
+        <div class="gm-rule">
+          <div class="gm-rule-line"></div>
+          <div class="gm-rule-diamond"></div>
+          <div class="gm-rule-line"></div>
+        </div>
+        <div class="gm-tagline">All the feline crime news that's fit to print</div>
+      </div>
+
+      <div class="gm-carousel">
+        <div class="gm-track-wrap">
+          <div class="gm-track" id="gm-track"></div>
+        </div>
+        <div class="gm-controls">
+          <button class="gm-arrow" id="gm-prev" aria-label="Previous stories">&#8592;</button>
+          <div class="gm-dots" id="gm-dots"></div>
+          <button class="gm-arrow" id="gm-next" aria-label="Next stories">&#8594;</button>
+        </div>
+      </div>
+
+      <div class="gm-cta">
+        <a class="gm-cta-link" href="https://thegoodmeow.com" target="_blank" rel="noopener noreferrer">
+          Read more at The Good Meow &nbsp;&#8594;
+        </a>
+        <div class="gm-cta-sub">Feline crime coverage · Updated daily · Zero objectivity</div>
+      </div>
+
+    </div>
+  </section>
 
   <!-- ═══ BAIL OUT A CAT ═══ -->
   <section id="bail-out">
@@ -1553,6 +1720,127 @@ document.getElementById('tip-crime-desc').addEventListener('keydown', e => {
 });
 
 renderTips();
+
+// ── THE GOOD MEOW CAROUSEL ──────────────────────────────
+const GM_STORIES = [
+  {
+    label: "CRIME DESK",
+    headline: "Local Cat Denies Involvement In Countertop Incident, Cites 'Gravity'",
+    blurb: "The suspect demonstrated in open court that objects fall whether or not they are pushed. The mug was not available for comment.",
+    byline: "B. Harrington"
+  },
+  {
+    label: "BREAKING",
+    headline: "Tabby Acquitted After Jury Finds Evidence 'Too Adorable To Prosecute'",
+    blurb: "In a landmark ruling, the defendant's ear tufts were deemed a mitigating circumstance. Sentencing has been postponed indefinitely.",
+    byline: "Staff Reporter"
+  },
+  {
+    label: "WANTED",
+    headline: "Sock Thief Still At Large, Believed To Be Napping On The Evidence",
+    blurb: "Authorities describe the suspect as orange, fluffy, and completely unrepentant. Last known location: the clean laundry pile.",
+    byline: "B. Harrington"
+  },
+  {
+    label: "EXCLUSIVE",
+    headline: "Cat Pleads Temporary Insanity Following 3AM Hallway Sprint",
+    blurb: "The legal team argues their client was possessed by an unknowable energy between 3 and 4AM. The judge is skeptical.",
+    byline: "Crime Correspondent"
+  },
+  {
+    label: "INVESTIGATION",
+    headline: "Forensics Confirm: The Glass Was Knocked Off On Purpose",
+    blurb: "After three weeks of analysis, investigators found the suspect made direct eye contact before committing the act. The report reads simply: 'deliberate.'",
+    byline: "B. Harrington"
+  },
+  {
+    label: "OPINION",
+    headline: "The Couch Was Already Ruined, Says Suspect Who Made It Considerably Worse",
+    blurb: "In an exclusive interview, the defendant maintained she was 'merely improving the texture.' Prior damage is characterized as 'not her fault.'",
+    byline: "Editorial Board"
+  },
+  {
+    label: "PROFILE",
+    headline: "Void Cat, 3, Described As 'Armed With Indifference And A 4AM Meow'",
+    blurb: "Officials warn the suspect should not be approached without a full food bowl and a quiet demeanor. Eye contact is strongly inadvisable.",
+    byline: "Staff Reporter"
+  },
+  {
+    label: "COURT",
+    headline: "Local Cat Files Counter-Suit, Claims Human 'Moved The Foot First'",
+    blurb: "The plaintiff — a tuxedo cat named Biscuits — alleges the human foot entered her designated sleeping zone without prior consent. Trial date TBD.",
+    byline: "Legal Desk"
+  },
+  {
+    label: "BREAKING",
+    headline: "Water Glass Tipped 'Accidentally'; Suspect Seen Watching Calmly From Across Room",
+    blurb: "Witnesses report the suspect walked away slowly, sat down, and began grooming. Investigators have called the comportment 'brazen.'",
+    byline: "B. Harrington"
+  },
+  {
+    label: "SCIENCE",
+    headline: "Study Confirms Cats Select Laps Based On Maximum Inconvenience To The Human",
+    blurb: "A seven-year study has concluded that lap selection is driven entirely by disruption potential. Cats declined to comment, then sat on the data.",
+    byline: "Science Desk"
+  }
+];
+
+const PER_PAGE = window.innerWidth < 900 ? 1 : 3;
+let gmPage = 0;
+const totalPages = Math.ceil(GM_STORIES.length / PER_PAGE);
+let gmTimer;
+
+function gmRender(animate) {
+  const track = document.getElementById('gm-track');
+  const start = gmPage * PER_PAGE;
+  const stories = GM_STORIES.slice(start, start + PER_PAGE);
+
+  const fade = () => {
+    track.innerHTML = stories.map(s => `
+      <div class="gm-card">
+        <div class="gm-card-label">${s.label}</div>
+        <div class="gm-card-body">
+          <div class="gm-headline">${s.headline}</div>
+          <div class="gm-blurb">${s.blurb}</div>
+          <div class="gm-byline">
+            <span>${s.byline} · The Good Meow</span>
+            <a class="gm-read-more" href="https://thegoodmeow.com" target="_blank" rel="noopener noreferrer">Read more &#8594;</a>
+          </div>
+        </div>
+      </div>`).join('');
+    track.classList.remove('fading');
+  };
+
+  if (animate) {
+    track.classList.add('fading');
+    setTimeout(fade, 400);
+  } else {
+    fade();
+  }
+
+  // Dots
+  const dots = document.getElementById('gm-dots');
+  dots.innerHTML = Array.from({length: totalPages}, (_, i) =>
+    `<div class="gm-dot${i === gmPage ? ' active' : ''}" onclick="gmGoTo(${i})"></div>`
+  ).join('');
+}
+
+function gmGoTo(page) {
+  gmPage = (page + totalPages) % totalPages;
+  gmRender(true);
+  gmResetTimer();
+}
+
+function gmResetTimer() {
+  clearInterval(gmTimer);
+  gmTimer = setInterval(() => gmGoTo(gmPage + 1), 6000);
+}
+
+document.getElementById('gm-prev').addEventListener('click', () => gmGoTo(gmPage - 1));
+document.getElementById('gm-next').addEventListener('click', () => gmGoTo(gmPage + 1));
+
+gmRender(false);
+gmResetTimer();
 </script>
 </body>
 </html>
