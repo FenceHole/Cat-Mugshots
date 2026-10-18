@@ -3,6 +3,19 @@
   "outputDirectory": "artifacts/catmugshots/dist/public",
   "installCommand": "pnpm install --frozen-lockfile",
   "framework": null,
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.catmugshots.com"
+        }
+      ],
+      "destination": "https://catmugshots.com/$1",
+      "permanent": true
+    }
+  ],
   "env": {
     "BASE_PATH": "/"
   }
