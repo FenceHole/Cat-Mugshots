@@ -1,7 +1,7 @@
 {
   "buildCommand": "pnpm --filter @workspace/catmugshots run build",
   "outputDirectory": "artifacts/catmugshots/dist/public",
-  "installCommand": "pnpm install",
+  "installCommand": "pnpm install --frozen-lockfile",
   "framework": null,
   "env": {
     "BASE_PATH": "/"
